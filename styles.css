@@ -15,9 +15,8 @@ body {
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center vertically */
     align-items: center; /* Center content horizontally */
-    padding: 10px; /* Add some padding to avoid edges */
     box-sizing: border-box; /* Include padding in height */
-    padding: 35px;
+    padding: 50px;
 }
 
 body, html {
@@ -47,15 +46,23 @@ h3 {
     display: block;
     display: block; /* Ensures proper spacing behavior */
     margin-bottom: 30px;
-    margin-top: 50px; /* Adjust the gap size as needed */
+    margin-top: 70px; /* Adjust the gap size as needed */
     margin-left: auto; /* Centers the logo horizontally */
     margin-right: auto; /* Centers the logo horizontally */
 }
 
+.text-format{
+    font-family: 'EB Garamond';
+    text-align: center;
+    margin-top: 0; /* Remove extra margin */
+    font-size: 3rem; /* Adjust text size as needed */
+    padding-top: 10px; /* Add slight spacing between image and text */
+}
+
 .image-container {
     position: relative;
-    width: 150%;
-    height: 100vh; /* Full viewport height */
+    width: 100%;
+    height: auto; /* Adjust height to auto */
     overflow: hidden;
 }
 
@@ -71,9 +78,141 @@ h3 {
     height: 200vh; /* Extend page for scrolling */
   }
 
-.eb-garamond-<uniquifier> {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+
+div h1 {
+    font-family: 'EB garamond';
+    font-weight:90;
 }
+
+.text-sub-box{
+    display: /* Make the container a flexbox */
+    justify-content: center; /* Center the content horizontally */
+    max-width: 800px; /* Set a maximum width */
+    padding: 0 20px; /* Add some padding */
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center; /* Center items within the grid */
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .text-format {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    .text-sub-box {
+        padding: 0 10px; /* Less padding on smaller screens */
+    }
+}
+
+.image-text-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Fixed gap between the image and the text */
+    margin: 0 auto; /* Center the container */
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+  }
+  h2 {
+    text-align: center;
+    color: #213d36;
+    margin-bottom: 30px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    max-height: 200px;
+  }
+  textarea {
+    resize: vertical;
+  }
+  select {
+    height: 50px;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #213d36;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  .column {
+    flex: 0 0 calc(49% - 20px);
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 600px) {
+    .column {
+      flex-basis: 100%;
+      margin: 10px 0;
