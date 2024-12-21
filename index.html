@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<script src="script.js"></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grande Venti</title>
+    <title>Grande Venti - Order</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +13,40 @@
     <section>
         <div class="upbox">
             <img src="images/logo.svg" alt="logo" class="logo">
-            <h3>Grande Venti is a local coffee shop in your local town. Here you can order your favorite drink, breakfast, snacks or sweet treats</h3>
+            <h3>Order your favorite drinks and treats from Grande Venti</h3>
         </div>
     </section>
-    <section>
-        <div class="image-text-container">
-            <div class="image-container">
-                <img src="images/cafeback.png" alt="Image">
-        </div>
-    </section>
+
     <section>
         <div class="container">
-            <h2>Order Here</h2>
+            <h2>Place Your Order</h2>
             
-          </div>
+            <form id="orderForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <h3>Select Your Items</h3>
+                <div id="foodGallery" class="food-gallery">
+                    <!-- Food items will be dynamically inserted here -->
+                </div>
+
+                <button type="submit" id="orderButton" disabled>Order Now - Total: $0.00</button>
+            </form>
+        </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
